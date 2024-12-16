@@ -14,11 +14,3 @@ services:
       - myevershop
     ports:
       - 3000:3000
-
-networks:
-  myevershop:
-    name: MyEverShop
-    driver: bridge
-
-volumes:
-  postgres-data:
