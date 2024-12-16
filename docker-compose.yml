@@ -10,7 +10,5 @@ services:
       DB_PASSWORD: 1751282a12b428ab48cb
       DB_USER: postgres
       DB_NAME: evershop-demo
-    networks:
-      - myevershop
     ports:
       - 3000:3000
