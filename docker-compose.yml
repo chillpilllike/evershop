@@ -12,8 +12,6 @@ services:
       DB_NAME: evershop-demo
     networks:
       - myevershop
-    depends_on:
-      - database
     ports:
       - 3000:3000
 
