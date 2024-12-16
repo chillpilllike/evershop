@@ -5,32 +5,17 @@ services:
     image: evershop/evershop:latest
     restart: always
     environment:
-      DB_HOST: database
+      DB_HOST: evershop-demo_database
       DB_PORT: 5432
-      DB_PASSWORD: postgres
+      DB_PASSWORD: 1751282a12b428ab48cb
       DB_USER: postgres
-      DB_NAME: postgres
+      DB_NAME: evershop-demo
     networks:
       - myevershop
     depends_on:
       - database
     ports:
       - 3000:3000
-  
-  #The postgres database: 
-  database:
-    image: postgres:16
-    restart: unless-stopped
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
-    ports:
-      - "5432:5432"
-    networks:
-      - myevershop
 
 networks:
   myevershop:
